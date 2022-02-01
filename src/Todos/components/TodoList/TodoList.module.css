@@ -1,0 +1,7 @@
+.list {
+  @apply m-4;
+}
+
+.list > li {
+  @apply border p-4 shadow-sm mb-6;
+}
