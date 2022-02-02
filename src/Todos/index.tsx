@@ -1,6 +1,8 @@
+import { lazy } from "react";
 import { useRoutes } from "react-router";
-import TodoDetails from "./pages/TodoDetails";
-import TodoOverview from "./pages/TodoOverview";
+
+const TodoDetails = lazy(() => import("./pages/TodoDetails"));
+const TodoOverview = lazy(() => import("./pages/TodoOverview"));
 
 const Todos = () => {
   const routes = useRoutes([

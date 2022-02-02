@@ -1,14 +1,15 @@
 import { observer } from "mobx-react-lite";
 import { useStore } from "../../../stores";
-import styles from "./TodoList.module.css";
 
 const TodoList = () => {
   const { todoStore } = useStore();
 
   return (
-    <ul className={styles.list}>
+    <ul className={"m-4"}>
       {todoStore.list.map((l) => (
-        <li key={l.id}>{l.title}</li>
+        <li className="border p-4 shadow-sm mb-6" key={l.id}>
+          {l.title}
+        </li>
       ))}
     </ul>
   );
